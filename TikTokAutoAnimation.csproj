@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+		<PackageReference Include="Icomm.Configs" Version="0.0.2.10" />
+		<PackageReference Include="Icomm.Configs.Providers.HttpProvider" Version="0.0.3.5" />
+		<PackageReference Include="Icomm.Core" Version="0.0.2.5" />
+		<PackageReference Include="Icomm.Core.Dapper" Version="0.0.1.4" />
+		<PackageReference Include="Icomm.Logs" Version="0.1.4" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+		<PackageReference Include="Refit" Version="6.1.15" />
+		<PackageReference Include="Refit.HttpClientFactory" Version="6.1.15" />
+		<PackageReference Include="RestSharp" Version="106.12.0" />
+		<PackageReference Include="Selenium.Support" Version="4.1.0" />
+		<PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="100.0.4896.6000" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+		<PackageReference Include="TextCopy" Version="6.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
