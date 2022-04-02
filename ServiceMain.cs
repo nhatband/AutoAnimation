@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,13 @@ namespace TikTokAutoAnimation
 {
     class ServiceMain : BackgroundService
     {
+        private readonly IConfiguration configuration;
+
+        public ServiceMain(IConfiguration configuration)
+        {
+            this.configuration = configuration;
+        }
+
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
             return Task.Factory.StartNew(async () =>
@@ -18,7 +26,7 @@ namespace TikTokAutoAnimation
                 {
                     try
                     {
-
+                        new ActionViewTikTok(configuration).Execute();
                     }
                     catch (Exception ex)
                     {
